@@ -1,6 +1,6 @@
 #!/bin/bash
-source_dir=/home/che/Documents/*
-backup_dir=/mnt/Virtual
+source_dir=/etc/*
+backup_dir=/home
 find $source_dir -mtime -1 -exec cp -r {} $backup_dir/$(date +%Y%m%d) \;
 
 
