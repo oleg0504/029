@@ -1,6 +1,6 @@
 #!/bin/bash
 source_dir=/etc/*
-backup_dir=/home
+backup_dir=/home/
 find $source_dir -mtime -1 -exec cp -r {} $backup_dir/$(date +%Y%m%d) \;
 
 
