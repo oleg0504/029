@@ -26,7 +26,7 @@ if test -f "$FILE"; then
     #DOWNLOAD AND COPY MYSQL JDBC DRIVER
     
     wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.48.tar.gz
-    tar -xvf mysql-connector-java-5.1.48.tar.gz
+    tar -xvf mysql-connector-java-5.1.48.tar.gz -silent
     cp /home/vagrant/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar /opt/atlassian/confluence/lib
     sudo systemctl start confluence.service
 else 
