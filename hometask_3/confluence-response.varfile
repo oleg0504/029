@@ -5,6 +5,6 @@ sys.confirmedUpdateInstallationString=false
 sys.languageId=en
 sys.installationDir=/opt/atlassian/confluence
 app.confHome=/var/atlassian/application-data/confluence
-executeLauncherAction$Boolean=true
+launch.application$Boolean=false
 httpPort$Long=8090
 portChoice=default
