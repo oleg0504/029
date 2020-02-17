@@ -20,9 +20,14 @@ Vagrant.configure("2") do |config|
       sudo apt-get install docker-ce -y
       sudo usermod -aG docker ${USER}
       docker ps
+      docker pull oleg0504/wordpress
+      docker pull oleg0504/mysql:mysql
+      docker run -d -p 8081:80 oleg0504/wordpress
+      docker run -d -p 3307:3306 oleg0504/mysql
 
   SHELL
   ubuntu1.vm.network :forwarded_port, guest: 8081, host: 8080, protocol: "tcp"
+  ubuntu1.vm.network :forwarded_port, guest: 3307, host: 3306, protocol: "tcp"
   end
  
   # The most common configuration options are documented and commented below.
