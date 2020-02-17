@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
       sudo usermod -aG docker ${USER}
       docker ps
       docker pull oleg0504/wordpress
-      docker pull oleg0504/mysql:mysql
+      docker pull oleg0504/mysql
       docker run -d -p 8081:80 oleg0504/wordpress
       docker run -d -p 3307:3306 oleg0504/mysql
 
